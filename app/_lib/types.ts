@@ -20,3 +20,8 @@ export type CatDetailsPageProps = {
 export type CatProps = {
     cat: Cat
 }
+export type CatsPageProps = {
+  searchParams: {
+    [key: string]: string | string[] | undefined;
+  };
+};

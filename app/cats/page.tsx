@@ -1,5 +1,5 @@
 import React from "react";
-import { Cat } from "../_lib/types";
+import { Cat, CatsPageProps } from "../_lib/types";
 import CatList from "../components/CatList";
 import TraitDropdown from "../components/TraitDropdown";
 
@@ -21,7 +21,7 @@ function determineFetchCatUrl(searchParams : any){
   return url
 }
 
-async function CatsPage({searchParams} : {[key: string]: string | string[] | undefined }) {
+const CatsPage: React.FC<CatsPageProps> = async({ searchParams }) => {
   // 1. determineFetchCatUrl is called and takes in searchParams
   const url : string = determineFetchCatUrl(searchParams);
   // 6. Make an API request to the URL returned from above function
