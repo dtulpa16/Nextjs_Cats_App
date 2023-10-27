@@ -21,7 +21,7 @@ function determineFetchCatUrl(searchParams : any){
   return url
 }
 
-export default async function CatsPage({searchParams} : {[key: string]: string | string[] | undefined }) {
+async function CatsPage({searchParams} : {[key: string]: string | string[] | undefined }) {
   // 1. determineFetchCatUrl is called and takes in searchParams
   const url : string = determineFetchCatUrl(searchParams);
   // 6. Make an API request to the URL returned from above function
@@ -36,3 +36,4 @@ export default async function CatsPage({searchParams} : {[key: string]: string |
     </div>
   );
 }
+export default CatsPage
