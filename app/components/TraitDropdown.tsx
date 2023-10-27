@@ -12,7 +12,7 @@ const router = useRouter()
 
   const onSelect =()=>{
     router.push(
-        `http://localhost:3000/cats?trait=${selectedOption}&value=${inputValue}`
+        `https://nextjs-cats-app.vercel.app/cats?trait=${selectedOption}&value=${inputValue}`
       );
   }
 
